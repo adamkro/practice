@@ -1,0 +1,19 @@
+h1 {
+	color: blue;			
+	text-align: center;
+	}
+
+body {background-color: #ebf2ee;}
+
+table {
+	border: 2px solid grey;
+	border-collapse: collapse;
+	text-align: center;
+	width: 20%;
+}
+th,td {
+	border: 1px solid grey;
+}
+th {
+	background-color: #4a4f4c;
+}
