@@ -3,7 +3,8 @@ h1 {
 	text-align: center;
 	}
 
-body {background-color: #ebf2ee;}
+body {background-image: linear-gradient(to right, #ebf2ee , #ddf0e5);
+}
 
 table {
 	border: 2px solid grey;
@@ -16,4 +17,21 @@ th,td {
 }
 th {
 	background-color: #4a4f4c;
+}
+
+button {
+	width: 200px;
+	background-color: orange;
+}
+
+button:hover {	
+	background-color: green;
+}
+.grid {
+	background-color: #e3c5f0;
+	display: grid;
+	padding: 20px;
+	grid-column-gap: 20px;
+	grid-row-gap: 10px;
+	grid-template-columns: auto auto auto;
 }
