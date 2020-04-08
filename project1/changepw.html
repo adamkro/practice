@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}
+	Hello
+{% endblock %}
+
+{% block body %}
+	<p>		
+		Hi, you can now change your password
+	</p>
+	<form action="{{url_for('changepw') }}" method="post">
+		<input type="text" name="name" placeholder="Enter username" required>
+		<input type="password" name="old_password" placeholder="Enter old password" required>
+		<input type="password" name="new_password" placeholder="Enter new password" required>
+		<button>Change password!</button>
+	</form>
+	
+	<a href="{{ url_for('login') }}">back to login</a>
+{% endblock %}

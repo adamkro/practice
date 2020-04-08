@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+		<style>
+			img {	width: 10%;
+					height: 5%;
+			}
+			.aligncenter {
+			text-align: center;
+			}
+			h1{ color: blue; 
+				text-align: center;
+			}
+			body{
+				background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;			
+			}
+			table {
+				border: 2px solid grey;
+				border-collapse: collapse;
+				text-align: center;
+				width: 80%;
+			}
+			th,td {
+				border: 1px solid grey;
+			}
+			th {
+				background-color: #4a4f4c;
+			}												
+		</style>
+	</head>
+	<body>
+		<h1>{% block title %}{% endblock %}</h1>		
+		
+		{% block body%}
+		{% endblock %}	
+	</body>
+</html>

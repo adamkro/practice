@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+	Oops, something went wrong !
+{% endblock %}
+
+{% block body %}
+	<p>				
+	{{message}}
+	</p>
+	
+	<a href="{{ url_for('login') }}">Back to login page</a>
+	
+		
+
+{% endblock %}

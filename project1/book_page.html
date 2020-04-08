@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block title %}
+	{{book.title}}
+{% endblock %}
+
+{% block body %}
+	<p class="aligncenter">			
+	<img id="book_img" src="{{book.img_url}}" alt="pic2">			
+	</p>
+
+	<table>				
+		<tr>
+			<th> ISBN </th>
+			<th> Title </th>
+			<th> Author </th>						
+			<th> Publication Year </th>
+			<th> Average Rating by Goodreads </th>
+			<th> Number Of Ratings </th>
+		</tr>			
+		
+		<tr>
+			<td>{{book.isbn}}</td>
+			<td>{{book.title}}</td>
+			<td>{{book.author}}</td>			
+			<td>{{book.publication_year}}</td>	
+			<td>{{average_rating}}</td>			
+			<td>{{work_ratings_count}}</td>						
+		</tr>		
+	<div>
+		
+		
+		
+		
+	</div>
+	</table>
+	<table>				
+		<tr>
+			<th> Reviews </th>
+		</tr>	
+		{% for review in reviews %}		
+		<tr>
+			<td>{{review.review}} </td>			
+		</tr>
+		{% endfor %}
+	</table>
+	<p>
+	
+	
+	
+		Rate this book ! 
+	</p>
+	<form action="">
+		<input type="radio" name="1" value="1"> 1<br>
+		<input type="radio" name="2" value="2"> 2<br>
+		<input type="radio" name="3" value="3"> 3<br>
+		<input type="radio" name="4" value="4"> 4<br>
+		<input type="radio" name="5" value="5"> 5<br>
+	</form>	
+	<p>
+		Add a review!
+		
+	</p>
+	<form action="{{url_for('add_review', book_id = book.id) }}" method="post">
+		<input type="text" name="review" placeholder="Add a review" required><button>Submit Review!</button>			
+	</form>	
+	
+	
+	<a href="{{ url_for('index')}}">Back to search</a>
+{% endblock %}
