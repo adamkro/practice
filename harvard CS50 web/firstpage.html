@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}
+	First page
+{% endblock %}
+
+{% block body %}
+	<p>		
+		text text text text....
+	</p>
+	<form action="{{url_for('hello') }}" method="post">
+		<input type="text" name="name" placeholder="Enter name">
+		<button>Submit</button>
+	</form>
+	<div>
+		names
+	</div>	
+	<a href="{{ url_for('inner') }}">Go to 2nd page</a>
+{% endblock %}

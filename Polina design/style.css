@@ -1,0 +1,13 @@
+body {
+  margin: 0px;
+}
+
+h1{
+  color:#3366ff
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.padding{
+  padding: 2rem;

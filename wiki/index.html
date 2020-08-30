@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<title>Wiki scraping</title>
+		<link rel="stylesheet" href="styles.css"
+	</head>
+	<body>
+		<h1>{{head}}</h1>
+		<p> {{text}} </p>
+		<h2> Tags: </h2>
+		<ul>
+			{% for category in categories %}
+			<li>{{category}}</li>
+			{% endfor %}
+		</ul>
+		<img id="dog" src="{{img_src}}" alt="pic">
+		<div>
+			<a href="{{wiki_url}}">Read More!</a>
+		</div>
+		<p> Generating random article took {{elapsed_time}} seconds </p>
+
+		<form action="{{url_for('random_page') }}" method="post">
+			<input type="text" name="subject" placeholder="Search articles by subject" required><button>Search!</button>
+		</form>
+
+	</body>
+</html>

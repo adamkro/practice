@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Poli</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div class="row center">
+       <h1 class="center">♥ Poli Sewing ♥</h1>
+    </div>
+    <div id="galery" class="carousel slide w-75" data-ride="carousel" data-interval="false">
+      <div id="car_div" class="carousel-inner" align="center">
+        <!-- carousel items -->
+        <div class="carousel-item active">
+          <img class="d-block w-100 mh-20" src="./assets/c1.jpeg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./assets/c3.jpeg" alt="Third slide">
+        </div>
+      </div>
+       <!-- Controls -->
+      <a class="carousel-control-prev" href="#galery" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#galery" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <input type="button" onclick="callForImages()" value="Load" />
+
+    <script>
+      import * as fs from 'fs';
+
+      //Get amount of photos in folder
+      fs.readFile('count.txt', (err, data) => {
+          if (err) throw err;
+
+          console.log(data.toString());
+      })
+
+
+
+    </script>
+  </body>
+</html>
